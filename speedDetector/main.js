@@ -1,24 +1,26 @@
+// Define all variables that will be used.
+
 let speed = 135;
 const speedLimit = 70;
 const addSpeed = 5;
+// Define points by giving it a formula  to calculate it.
 let points = (speed-70)/5;
 
-
-function calculateDemerit(speed){
-    if (speed <= 70){
+// Use function to calculate and give output of demerit points
+function calculatepoints(speed){
+    if (speed <= speedLimit){
         console.log("Ok")
-    }else if(speed > 70 && speed % 5 === 0){
+    }else if(speed > speedLimit && points <= 12){
         return points
-        // function demerit(points){
-        //     if (points <= 12){
-        //         console.log(points)
-        //     }else{
-        //         console.log("license suspended")
-        //     }
-        // }
+       
     }else{
-        console.log("No speed detected")
+        console.log("license suspended")
     }
 }
-calculateDemerit(speed)
+
+// call the function.
+calculatepoints(speed)
+
+
+// print the points.
 console.log(points)
