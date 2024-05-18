@@ -1,10 +1,11 @@
 
-
+// Define a variable that will contain prompt message
 let studentsMarks = prompt("Enter the student's marks between 0 and 100");
 
-
+// Declare a main function that will calculate the grade
 function calculateStudentGrade(studentsMarks){
     if(studentsMarks >= 0 && studentsMarks <= 100){
+        // Declare a function that will assign grade according to marks entered
         function gradeCalculator(marks){
             if(marks > 79){
                 return 'A';
@@ -25,6 +26,8 @@ function calculateStudentGrade(studentsMarks){
         return "Input the correct marks"; 
     }
 }
-
+// call the main function
 let grade = calculateStudentGrade(studentsMarks);
+
+// give the output inform of alert
 alert("The student's grade is: " + grade);
